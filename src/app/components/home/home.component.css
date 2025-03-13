@@ -64,7 +64,8 @@
   }
   
   .cta-button:hover {
-    background-color: #303f9f;
+    background: linear-gradient(45deg, #4f0183, #004a45);
+    color:#ff00cc;
   }
   
   @media (max-width: 768px) {

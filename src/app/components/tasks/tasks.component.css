@@ -100,7 +100,8 @@
   }
   
   .delete-button:hover {
-    background-color: #d32f2f;
+    background: linear-gradient(45deg, #4f0183, #004a45);
+    color:#ff00cc;
   }
   
   @media (max-width: 600px) {

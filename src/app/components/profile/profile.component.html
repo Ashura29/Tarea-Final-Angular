@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="profile-container">
+    <div class="profile-card">
+      <h1 class="profile-title">Perfil de Usuario</h1>
+      
+      <div class="profile-info">
+        <div class="info-item">
+          <label>Nombre:</label>
+          <div class="edit-field">
+            <input [(ngModel)]="username" class="username-input">
+            <button (click)="updateUsername(username)" class="save-button">Guardar</button>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <label>Rol:</label>
+          <span>{{ role }}</span>
+        </div>
+        
+        <div class="info-item">
+          <label>Total de Tareas:</label>
+          <span>{{ taskCount }}</span>
+        </div>
+        
+        <div class="info-item">
+          <label>Tareas Completadas:</label>
+          <span>{{ completedTaskCount }} de {{ taskCount }}</span>
+        </div>
+        
+        <div class="progress-container">
+          <div class="progress-label">Progreso:</div>
+          <div class="progress-bar">
+            <div 
+              class="progress-fill" 
+              [style.width]="taskCount ? (completedTaskCount / taskCount * 100) + '%' : '0%'"
+            ></div>
+          </div>
+          <div class="progress-percentage">
+            {{ taskCount ? (completedTaskCount / taskCount * 100).toFixed(0) : 0 }}%
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

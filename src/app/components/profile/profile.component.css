@@ -1,0 +1,134 @@
+.container {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* .profile-card {
+    background-color: #404080;
+    background: linear-gradient(45deg, #9900ff, #00fff0)
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  } */
+  .profile-card{
+    background-color: rgba(24, 24, 36, 0.95);
+    border-radius: 10px;
+    border: 1px solid #00fff0;
+    box-shadow: 0 0 20px rgba(128, 0, 255, 0.3),
+                0 0 40px rgba(128, 0, 255, 0.2);
+    width: 90%;
+    padding: 30px;
+    /* max-width: 400px; */
+    backdrop-filter: blur(10px);
+  }
+  
+  .profile-title {
+    color:  #00fff0;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .info-item label {
+    min-width: 150px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .edit-field {
+    display: flex;
+    flex: 1;
+  }
+  
+  .username-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .save-button {
+    /* background-color: #3f51b5; */
+    background: linear-gradient(45deg, #9900ff, #00fff0);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .save-button:hover {
+    background-color: #303f9f;
+  }
+  
+  .progress-container {
+    margin-top: 10px;
+  }
+  
+  .progress-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    /* background-color: #4caf50; */
+    background: linear-gradient(45deg, #9900ff, #00fff0);
+    transition: width 0.3s ease;
+  }
+  
+  .progress-percentage {
+    text-align: right;
+    font-weight: bold;
+    color: #00fff0;
+  }
+  
+  @media (max-width: 600px) {
+    .profile-container{
+      flex-direction: column;
+    }
+    .profile-card {
+      padding: 20px;
+    }
+    
+    .info-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .info-item label {
+      margin-bottom: 5px;
+    }
+    
+    .edit-field {
+      width: 100%;
+    }
+  }

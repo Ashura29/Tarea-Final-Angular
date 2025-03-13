@@ -1,0 +1,21 @@
+<div class="home-container">
+    <h1 class="welcome">¡Bienvenido/a, {{ username }}!</h1>
+    
+    <div class="app-description">
+      <h2>Aplicación de Lista de Tareas</h2>
+      <p>Esta aplicación te permite gestionar tus tareas diarias de manera sencilla y efectiva. Puedes:</p>
+      <ul>
+        <li>Ver todas tus tareas pendientes</li>
+        <li>Agregar nuevas tareas</li>
+        <li>Marcar tareas como completadas</li>
+        <li>Eliminar tareas</li>
+      </ul>
+    </div>
+    
+    <div class="cta-section">
+      <p>Comienza a organizar tus tareas ahora mismo:</p>
+      <button class="cta-button" routerLink="/tasks" routerLinkActive="active">Ver mis tareas</button>
+
+    </div>
+  </div>
+  <router-outlet></router-outlet>

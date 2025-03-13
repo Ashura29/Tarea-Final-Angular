@@ -1,0 +1,133 @@
+.container {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.tasks-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    color:  #00fff0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .add-task-section {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  
+  .task-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+  }
+  
+  .add-button {
+    /* background-color: #4caf50; */
+    background: linear-gradient(45deg, #03e1c7, #67d90a);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .add-button:hover {
+    /* background-color: #388e3c; */
+    background: linear-gradient(45deg, #014c48, #10850a);
+  }
+  
+  .empty-list {
+    text-align: center;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: rgba(24, 24, 36, 0.95);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .task-item.completed {
+    background-color: rgba(24, 24, 36, 0.95);
+  }
+  
+  .task-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-checkbox {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+  
+  .task-name {
+    font-size: 16px;
+  }
+  
+  .task-item.completed .task-name {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .delete-button {
+    /* background-color: #f44336; */
+    background: linear-gradient(45deg, #9900ff, #00fff0);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 600px) {
+    .add-task-section {
+      flex-direction: column;
+    }
+    
+    .task-input {
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    
+    .add-button {
+      border-radius: 4px;
+    }
+    
+    .task-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .task-content {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    
+    .delete-button {
+      align-self: flex-end;
+    }
+  }

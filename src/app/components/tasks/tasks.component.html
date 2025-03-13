@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="tasks-container">
+    <h1 class="title">Lista de Tareas de {{ username }}</h1>
+    
+    <div class="add-task-section">
+      <input 
+        type="text" 
+        [(ngModel)]="newTaskName" 
+        placeholder="Escribe una nueva tarea..." 
+        class="task-input"
+        (keyup.enter)="addTask()"
+      >
+      <button (click)="addTask()" class="add-button">Agregar</button>
+    </div>
+    
+    <div class="tasks-list">
+      <div *ngIf="tasks.length === 0" class="empty-list">
+        No hay tareas pendientes. ¡Añade una nueva tarea!
+      </div>
+      
+      <div *ngFor="let task of tasks" class="task-item" [class.completed]="task.completed">
+        <div class="task-content">
+          <input 
+            type="checkbox" 
+            [checked]="task.completed" 
+            (change)="toggleCompletion(task.id)"
+            class="task-checkbox"
+          >
+          <span class="task-name">{{ task.name }}</span>
+        </div>
+        <button (click)="deleteTask(task.id)" class="delete-button">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
